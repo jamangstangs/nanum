@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <title>이메일인증</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        .title {
+            padding: 20px 0px;
+            border-bottom: 1px solid rgb(223, 223, 223);
+            font-size: 20px;
+        }
+
+        .table-overall {
+            font-size: 16px;
+            color: rgb(34, 34, 34);
+            line-height: 1.2;
+        }
+
+        .line-table {
+            height: 1px;
+            background: black;
+            position: relative;
+        }
+
+        .line-content {
+            width: 20%;
+            height: 1px;
+        }
+
+        .content {
+            font-size: 16px;
+            padding: 10px;
+            line-height: 160%;
+        }
+
+        .footer {
+            font-size: 13px;
+            line-height: 26px;
+            padding: 15px;
+            padding-top: 0px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <table  border="0" align="center" cellpadding="0" cellspacing="0" width="400px" style="font-family: NanumSquare, sans-serif;">
+        <tbody>
+        <tr>
+            <td align="center" style="padding: 25px 18px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="400px" class="table-overall">
+                    <tbody>
+                    <tr>
+                        <td class="line-table">
+                            <div class="line-content"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" class="title">
+                            <b style="color: rgb(255, 52, 0);">이메일 인증</b>을 완료해 주세요 <br>
+                            Complete <b style="color: rgb(255, 52, 0);">Email Verification</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="line-table">
+                            <div class="line-content"></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="line-height: 20px; padding: 23px 0px;">
+                            <p class="content" style=" margin: 0px 0px 20px;">
+                                나눔마켓 회원가입 완료를 위한 메일이 발송되었습니다. <br>
+                                <small>This e-mail has been sent to complete the Nanum sign-up.</small>
+                            </p>
+                            <p class="content" style="margin: 0px; padding-top:0; ">
+                                나눔마켓 회원가입을 위해 이메일 인증이 필요합니다. <br>
+                                <small>Email authentication is required to sign up for the Nanum.</small>
+                                <br>
+                                    <span style="color: rgb(255, 52, 0);">
+                                        다음 코드를 입력하여 이메일 인증을 완료해 주세요. <br>
+                                        <small>Please enter the following code to complete email authentication.</small>
+                                    </span>
+                                <br>
+                            <div style="padding:10px">
+                                <p style="font-size: large; text-align: center;" th:text="${verificationCode}"></p>
+                            </div>
+                            <div style="padding:10px; line-height: 160%;">
+                                이메일 인증은 메일이 발송된 시점부터 15분 간만 유효합니다. <br>
+                                <small>Email authentication is only valid for 15 minutes from the time the mail is sent.</small>
+                            </div>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="line-table">
+                            <div class="line-content"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 25px; padding-bottom: 24px; border-top: 1px solid black;">
+                            <div class="footer">
+                                본 메일은 발신전용입니다. 더 궁금한 사항은 나눔마켓 오픈카톡을 이용해주시기 바랍니다. <br>
+                                This email is outgoing only. If you have any more questions, please use the nanum open kakaotalk.
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
